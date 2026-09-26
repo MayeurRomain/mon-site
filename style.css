@@ -1,0 +1,130 @@
+html {
+  height: 100%;
+  background: 50% 50% no-repeat
+    url('data:image/svg+xml,<svg viewBox="-20 -5 60 40" width="140" xmlns="http://www.w3.org/2000/svg" opacity="0.2"><path d="M1 8l11-7 11 7v8l-11 7-11-7zm0 0l11 8 11-8m0 8L12 8 1 16M12 1v7m0 8v7" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"/><text x="-12" y="32" font-size="5" font-family="monospace" fill="currentColor">Built on CodePen</text></svg>');
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f7f7f7;
+}
+
+/* En-tête */
+header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  text-align: right;
+}
+
+.navbar a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contenu */
+main {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 20px;
+}
+
+section {
+  margin-bottom: 70px;
+}
+
+h2 {
+  margin-bottom: 25px;
+}
+
+/* Présentation */
+.presentation {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.presentation > div {
+  flex: 1;
+}
+
+/* Mayeur Romain en rouge */
+.presentation h1 {
+  color: red;
+}
+
+/* Le paragraphe de présentation en vert */
+.description {
+  color: green;
+}
+
+/* Photo */
+.presentation img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Compétences et projets */
+.competences,
+.projets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+article {
+  background: white;
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.bouton {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Version téléphone */
+@media (max-width: 700px) {
+
+  .presentation {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .competences,
+  .projets {
+    grid-template-columns: 1fr;
+  }
+}
